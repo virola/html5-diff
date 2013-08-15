@@ -2075,33 +2075,33 @@
      <li><p>有 <code>type=number</code> 的 <code>input</code> 元素允许有 <code>maxlength</code> 和 <code>size</code> 属性 (但是会在验证器中给出警告信息)
      <li><p>链接关系现在允许有 "<code>shortcut icon</code>"。
      <li><p>标题元素现在允许有 <code>heading</code> 和 <code>tab</code> 的角色。
-     <li><p>Things that use <code>EventTarget</code> now inherit from it instead of using "implements".
-     <li><p>The <code>setInterval()</code> API now clamps to 4ms instead of 10ms.
-     <li><p>The <code>select</code> element and its <code>options</code> collection now have a setter.
-     <li><p><code>rel=help</code> on links now show a help cursor by default.
-     <li><p>Calls to <code>window.print()</code> before the document is loaded defers the print until it is loaded.
-     <li><p>Application cache gained an <code>abort()</code> method.
-     <li><p><code>HTMLCollection</code>, <code>DOMTokenList</code>, <code>getElementsByClassName()</code>, <code>createHTMLDocument()</code>, HTML-specific overrides to some DOM Core features (like <code>createElement()</code>), some definitions, the <code>id</code> IDL attribute and ID handling moved to DOM4.
-     <li><p>Fragment identifiers can now survive redirects.
-     <li><p>The <code>pushState()</code> and <code>replaceState()</code> methods now change the history entry to GET.
-     <li><p>The command API now has its properties prefixed so they are now <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code> and <code>commandChecked</code>.
-     <li><p>The structured clone algorithm now supports sparse arrays.
-     <li><p><code>window.postMessage</code> now supports transferring some objects instead of cloning them, and supports transferring <code>ArrayBuffer</code>.
-     <li><p>Application cache was made stricter in its MIME type checking.
-     <li><p>The <code>placeholder</code> attribute is now allowed on <code>input</code> elements with <code>type=number</code>.
-     <li><p><code>MediaController</code> gained an <code>onended</code> event listener.
-     <li><p>The HTML parser changed its handling of U+0000 characters in some places.
-     <li><p>The <code>object</code> element gained a new attribute <code>typemustmatch</code>, to make it safer for Web developers to embed untrusted resources where they expect a certain content type.
-     <li><p>The <code>form</code> attribute was removed from <code>meter</code> and <code>progress</code>.
-     <li><p>The HTML parser was made more forward compatible in its handling of <code>ruby</code>.
-     <li><p>Some MIME types (e.g. <code>text/plain</code>) that are guaranteed to never be supported as scripting types for <code>script</code> were specified, so Web developers can safely use them for custom data blocks.
-     <li><p><code>about:blank</code> documents created from <code>window.open()</code> now get a <code>load</code> event.
-     <li><p><code>window.status</code> was specified to exist but do nothing.
-     <li><p>Drag and drop <code>DataTransferItems</code> was renamed to <code>DataTransferItemList</code>.
-     <li><p>Application cache now supports 'no-store' and HTTPS.
-     <li><p>The structured clone algorithm now supports getters.
-     <li><p>The <code>crossorigin</code> attribute has been added to <code>img</code>, <code>video</code> and <code>audio</code> to use CORS.
-     <li><p>The <code>external</code> IDL attribute has been added on <code>window</code> and has the members <code>AddSearchProvider()</code> and <code>IsSearchProviderInstalled()</code>.
+     <li><p>现在使用 <code>EventTarget</code> 会继承它，而不是实现（"implements"）。
+     <li><p><code>setInterval()</code> API 从原来的 10ms 减至 4ms 。
+     <li><p><code>select</code> 元素和它的 <code>options</code> 集合现在有setter。
+     <li><p>链接上的 <code>rel=help</code> 现在默认会显示帮助符号的鼠标样式。
+     <li><p>在文档加载完成之前调用 <code>window.print()</code> 会延迟到加载完成之后打印。
+     <li><p>应用缓存有了 <code>abort()</code> 方法。
+     <li><p>将<code>HTMLCollection</code>, <code>DOMTokenList</code>, <code>getElementsByClassName()</code>, <code>createHTMLDocument()</code>, 对一些DOM核心功能的HTML特性的重写 (如 <code>createElement()</code>), 一些定义, <code>id</code> IDL 属性和 ID 处理句柄移至 DOM4.
+     <li><p>片段标识重定向后仍然存在。
+     <li><p> <code>pushState()</code> 和 <code>replaceState()</code> 方法现在改变历史条目为GET。
+     <li><p>命令API的属性现在都有前缀，它们是 <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code> 和 <code>commandChecked</code>.
+     <li><p>结构化复制算法现在支持稀疏数组。
+     <li><p><code>window.postMessage</code> 现在支持传输一些对象而不是复制对象，同时支持传输 <code>ArrayBuffer</code>。
+     <li><p>应用缓存在其MIME类型检查时变得更严格。
+     <li><p><code>type=number</code>的 <code>input</code> 元素上现在允许有 <code>placeholder</code> 属性。
+     <li><p><code>MediaController</code> 有了 <code>onended</code> 事件监听。
+     <li><p>HTML解析器更改了其某些区域的U+0000字符处理。
+     <li><p><code>object</code> 元素有了新属性 <code>typemustmatch</code>, 让Web开发者嵌入非信任的资源时设置预期的内容类型，使其更安全。
+     <li><p>在 <code>meter</code> 和 <code>progress</code> 上移除了 <code>form</code> 属性。
+     <li><p>现在HTML解析器在 <code>ruby</code> 的处理上更前向兼容。
+     <li><p>规定了一些 <code>script</code> 上保证不会被当成脚本类型来支持的MIME 类型 (例如： <code>text/plain</code>)，因此Web开发者可以安全地用它们作为自定义数据块。
+     <li><p>通过 <code>window.open()</code> 创建的 <code>about:blank</code> 文档现在有了 <code>load</code> 事件。
+     <li><p>定义了 <code>window.status</code> 存在但是什么也不做。
+     <li><p>拖拽 <code>DataTransferItems</code> 重命名为 <code>DataTransferItemList</code>.
+     <li><p>应用缓存现在支持‘不存储’('no-store') 和 HTTPS.
+     <li><p>结构化复制算法现在支持getter。
+     <li><p>为了使用跨域资源共享 (CORS)，在 <code>img</code>, <code>video</code> 和 <code>audio</code> 上添加了 <code>crossorigin</code> 属性。
+     <li><p>在 <code>window</code> 上新增了 <code>external</code> IDL 属性，同时属性增加了成员 <code>AddSearchProvider()</code> 和 <code>IsSearchProviderInstalled()</code>。
     </ul>
 
     <p>更多WHATWG HTML的变更，对 W3C HTML5 没有影响:</p>
@@ -2109,35 +2109,35 @@
     <ul>
      <li><p>The 2d context 现在支持椭圆，有 <code>arc()</code> 和 <code>arcTo()</code> 和新的 <code>ellipse()</code> 方法。
      <li><p>The 2d context 现在支持 <code>Path</code> 对象。SVG路径数据可以添加到 <code>Path</code> 中。
-     <li><p>The <code>http+aes:</code> and <code>https+aes:</code> URL schemes were added to allow sensitive resources to be held on untrusted servers.
-     <li><p>When the <code>itemprop</code> attribute is used on an element where microdata gets its value from an attribute (like <code>href</code> on <code>a</code> elements), that attribute is now required.
-     <li><p><code>PeerConnection</code> was moved to WebRTC.
-     <li><p>WebVTT was moved to its own specification.
-     <li><p>WebSockets no longer receive messages in the <code>CLOSING</code> state.
-     <li><p>The Atom conversion algorithm was dropped.
-     <li><p>The <code>itemtype</code> attribute now allows multiple types.
-     <li><p><code>CanvasPixelArray</code> was dropped in favor of <code>Uint8ClampedArray</code>.
-     <li><p>The microdata to RDF conversion algorithm was dropped.
-     <li><p>The <code>link</code> element is no longer allowed to have both <code>rel</code> and <code>itemprop</code>.
-     <li><p>WebSocket API disallows opening an insecure connection if the document uses a secure connection.
+     <li><p>增加了 <code>http+aes:</code> 和 <code>https+aes:</code> URL 机制，以允许在非信任的服务器上存放敏感资源。
+     <li><p>当在微数据从其属性上获取值的元素（如 <code>a</code> 元素上的 <code>href</code>）上使用 <code>itemprop</code> 属性时，该属性是必需的。
+     <li><p>将<code>PeerConnection</code> 移至 WebRTC.
+     <li><p>WebVTT 被移至其自己的规范中。
+     <li><p>WebSockets 不再接收 <code>CLOSING</code> 状态的信息。
+     <li><p>原子会话算法被移除。
+     <li><p><code>itemtype</code> 属性现在允许多重类型。
+     <li><p>使用 <code>Uint8ClampedArray</code> 代替 <code>CanvasPixelArray</code>。
+     <li><p>微数据的RDF会话算法被移除。
+     <li><p><code>link</code> 元素不再允许同时有 <code>rel</code> 和 <code>itemprop</code>.
+     <li><p>如果文档使用安全连接，那么WebSocket API 不允许开放不安全连接。
      <li><p>“存储互斥（storage mutex）”是可选的。
-     <li><p>Web Storage no longer supports structured data.
-     <li><p>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in W3C HTML5.
-     <li><p>An experimental specification for the <code>window.find()</code> method was added.
-     <li><p>The 2d context <code>fillText()</code> and <code>strokeText()</code> methods now do not collapse whitespace.
-     <li><p>Microdata now handles infinite loops.
-     <li><p>Web Worker <code>location</code> now stringifies.
-     <li><p>Script errors in a Web Worker can now be detected in a parent worker or the document with the <code>onerror</code> handler.
-     <li><p><code>EventSource</code> now supports CORS.
-     <li><p><code>EventSource</code> was made stricter in its MIME type checking.
-     <li><p>Web Workers gained the <code>atob()</code> and <code>btoa()</code> methods.
-     <li><p>Web Workers gained the <code>ononline</code> and <code>onoffline</code> event handlers.
-     <li><p>WebSockets API has the <code>error</code> event again.
-     <li><p>WebSockets API now exposes the selected extensions<!-- and allows compression (was dropped in a later rev)-->.
-     <li><p>Various tweaks to the UDP <code>PeerConnection</code> API.
-     <li><p>WebSocket close code and reason are now supported in the API.
-     <li><p>Binary data is now supported in WebSockets.
-     <li><p>Redirects in WebSockets are now blocked for security reasons.
+     <li><p>Web存储不再支持结构化数据。
+     <li><p><code>a</code> 元素有了新的 <code>download</code> 属性。这个属性没有包含在 W3C HTML5 中。
+     <li><p>新增了 <code>window.find()</code> 方法的实验性规范。
+     <li><p>2d context 的<code>fillText()</code> 和 <code>strokeText()</code> 方法现在不会合并空格。
+     <li><p>微数据现在可以处理无限循环。
+     <li><p>Web Worker <code>location</code> 现在字符串化。
+     <li><p>Web Worker的脚本错误现在可以在父Worker中或者在文档的 <code>onerror</code> 处理器中检测到。
+     <li><p><code>EventSource</code> 现在支持跨域资源共享CORS.
+     <li><p><code>EventSource</code> 的MIME类型检测更严格了。
+     <li><p>Web Workers 有了 <code>atob()</code> 和 <code>btoa()</code> 方法。
+     <li><p>Web Workers 有了 <code>ononline</code> 和 <code>onoffline</code> 事件处理器。
+     <li><p>WebSockets API 又有了 <code>error</code> 事件。
+     <li><p>WebSockets API 现在暴露了选中的扩展<!-- 而且匀速压缩 (在后来的版本中删除了)-->.
+     <li><p>对 UDP <code>PeerConnection</code> API的一些微调。
+     <li><p>WebSocket 关闭代码和原因现在在API中被支持。
+     <li><p>WebSocket 支持二进制数据。
+     <li><p>WebSocket 的重定向现在由于安全问题被阻止。
     </ul>
 
     <h3 id="changes-2011-04-05"><span class="secno">6.4 </span>从2011-04-05到2011-05-25发生的变更</h3> <!-- rev 5974 - 6139 -->
@@ -2145,12 +2145,12 @@
     <ul>
      <li><p>移除了 <code>img</code>, <code>object</code>, CSS, 等等元素中的 <code>javascript:</code> 机制。
      <li><p>给 <code>canvas</code> 新增了 <code>toBlob()</code> 方法。
-     <li><p>The <code>drawFocusRing()</code> method on the <code>canvas</code> 2d context has been split into two methods, <code>drawSystemFocusRing()</code> and <code>drawCustomFocusRing()</code>.
-     <li><p>The <code>values</code> attribute on <code>PropertyNodeList</code> has been replaced with a <code>getValues()</code> method.
-     <li><p>The <code>select</code> event has been specified.
-     <li><p>The <code>selectDirection</code> IDL attribute has been added to <code>input</code> and <code>textarea</code>.
-     <li><p>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now match <code>fieldset</code>, and the <code>:indeterminate</code> pseudo-class can now match <code>progress</code>.
-     <li><p>The <code>getKind()</code> method has been added to <code>TrackList</code>.
+     <li><p><code>canvas</code> 2d context 的 <code>drawFocusRing()</code> 方法被切割成两个方法： <code>drawSystemFocusRing()</code> 和 <code>drawCustomFocusRing()</code>。
+     <li><p><code>PropertyNodeList</code> 的 <code>values</code> 属性被 <code>getValues()</code> 方法取代。
+     <li><p>规定了 <code>select</code> 事件。
+     <li><p><code>input</code> 和 <code>textarea</code> 上增加了 <code>selectDirection</code> IDL 属性。
+     <li><p><code>:enabled</code> 和 <code>:disabled</code> 伪类现在可以匹配 <code>fieldset</code>, 而 <code>:indeterminate</code> 伪类可以匹配 <code>progress</code>。
+     <li><p><code>TrackList</code> 新增了 <code>getKind()</code> 方法。
      <li><p>The <code>MediaController</code> API and the <code>mediagroup</code> attribute have been added to synchronize playback of media elements.
      <li><p>Some ARIA defaults have changed, and it is now invalid to specify ARIA attributes that match the defaults.
      <li><p>The <code>getName()</code> method on <code>TrackList</code> was renamed to <code>getLabel()</code>.
