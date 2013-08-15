@@ -2395,19 +2395,14 @@
     <h3 id="changes-2009-02-12"><span class="secno">6.11 </span>从2009-02-12到2009-04-23发生的变更</h3>
 
     <ul>
-     <li><p>A new global attribute called <code>spellcheck</code> has been
-     added.</li>
-     <li><p>Defined that JavaScript <code>this</code> in the global object
-     returns a <code>WindowProxy</code> object rather than the
-     <code>Window</code> object.</li>
-     <li><p>The <code>value</code> IDL attribute for <code>input</code>
-     elements in the File Upload state is now defined.</li>
-     <li><p>Definition of <code>designMode</code> was changed to be more in
-     line with legacy implementations.</li>
-     <li><p>The <code>drawImage()</code> method of the 2D drawing API can now
-     take a <code>video</code> element as well.</li>
-     <li><p>The way media elements load resources has been changed.</li>
-     <li><p><code>document.domain</code> is now IPv6-compatible.</li>
+     <li><p>添加了一个全局的新属性 <code>spellcheck</code> </li>
+     <li><p>定义了在Javascript中的全局对象中 <code>this</code> 属性会返回一个 <code>WindowProxy</code> 对象而不是
+     <code>Window</code> 对象。</li>
+     <li><p>为文件上传控件形式的 <code>input</code> 元素定义了 <code>value</code> 属性。</li>
+     <li><p>修改了 <code>designMode</code> 的定义，以便与之前的实现更切合.</li>
+     <li><p>现在 <code>video</code> 元素也可以使用2D绘图API的 <code>drawImage()</code> 方法了</li>
+     <li><p>改变了多媒体元素载入资源的方式.</li>
+     <li><p><code>document.domain</code> 兼容了IPV6</li>
      <li><p>The <code>video</code> element gained an <code>autobuffer</code>
      boolean attribute that serves as a hint.</li>
      <li><p>You are now allowed to specify the <code>meta</code> element with a
@@ -2458,9 +2453,7 @@
     <h3 id="changes-2008-06-10"><span class="secno">6.12 </span>从2008-06-10到2009-02-12发生的变更</h3>
 
     <ul>
-     <li><p>The <code>data</code> member of <code>ImageData</code> objects has
-     been changed from an array to a <code>CanvasPixelArray</code>
-     object.</li>
+     <li><p>修改<code>ImageData</code> 对象的 <code>data</code> 成员的类型从数组修改为 <code>CanvasPixelArray</code> 对象</li>
      <li><p>Shadows are now required from implementations of the
      <code>canvas</code> element and its API.</li>
      <li><p>Security model for <code>canvas</code> is clarified.</li>
@@ -2673,68 +2666,35 @@
     <h3 id="changes-2008-01-22"><span class="secno">6.13 </span>从2008-01-22到2008-06-10发生的变更</h3>
 
     <ul>
-     <li><p>Implementation and authoring details around the <code>ping</code>
-     attribute have changed.
-     <li><p><code>&lt;meta http-equiv=content-type&gt;</code> is now a
-     conforming way to set the character encoding.</li>
-     <li><p>API for the <code>canvas</code> element has been cleaned up. Text
-     support has been added.
-     <li><p><code>globalStorage</code> is now restricted to the same-origin
-     policy and renamed to <code>localStorage</code>. Related event
-     dispatching has been clarified.
-     <li><p><code>postMessage()</code> API changed. Only the origin of the
-     message is exposed, no longer the URL. It also requires a second
-     argument that indicates the origin of the target document.
-     <li><p>Drag and drop API has got clarification. The
-     <code>dataTransfer</code> object now has a <code>types</code>
-     attribute indicating the type of data being transferred.
-     <li><p>The <code>m</code> element is now called <code>mark</code>.
-     <li><p>Server-sent events has changed and gotten clarification. It uses a
-     new format so that older implementations are not broken.
-     <li><p>The <code>figure</code> element no longer requires a caption.
-     <li><p>The <code>ol</code> element has a new <code>reversed</code>
-     attribute.
-     <li><p>Character encoding detection has changed in response to feedback.
-     <li><p>Various changes have been made to the HTML parser section in
-     response to implementation feedback.
-     <li><p>Various changes to the editing section have been made, including
-     adding <code>queryCommandEnabled()</code> and related methods.
-     <li><p>The <code>headers</code> attribute has been added for
-     <code>td</code> elements.
-     <li><p>The <code>table</code> element has a new <code>createTBody()</code>
-     method.
-     <li><p>MathML support has been added to the HTML parser section. (SVG
-     support is still awaiting input from the SVG WG.)
-     <li><p>Web developer-defined attributes have been added. Web developers can add
-     attributes to elements in the form of
-     <code>data-<var>name</var></code> and can access these through the DOM
-     using <code>dataset[<var>name</var>]</code> on the element in question.
-     <li><p>The <code>q</code> element has changed to require punctuation
-     inside rather than having the browser render it.
-     <li><p>The <code>target</code> attribute can now have the value
-     <code>_blank</code>.
-     <li><p>The <code>showModalDialog</code> API has been added.
-     <li><p>The <code>document.domain</code> API has been defined.
-     <li><p>The <code>source</code> element now has a new
-     <code>pixelratio</code> attribute useful for videos that have some kind
-     encoding error.
-     <li><p><code>bufferedBytes</code>, <code>totalBytes</code> and
-     <code>bufferingThrottled</code> IDL attributes have been added to the
-     <code>video</code> element.
-     <li><p>Media <code>begin</code> event has been renamed to
-     <code>loadstart</code> for consistency with the Progress Events
-     specification.
-     <li><p><code>charset</code> attribute has been added to
-     <code>script</code>.
-     <li><p>The <code>iframe</code> element has gained the <code>sandbox</code>
-     and <code>seamless</code> attributes which provide sandboxing
-     functionality.
-     <li><p>The <code>ruby</code>, <code>rt</code> and <code>rp</code>
-     elements have been added to support ruby annotation.
-     <li><p>A <code>showNotification()</code> method has been added to show
-     notification messages to the user.
-     <li><p>Support for <code>beforeprint</code> and <code>afterprint</code>
-     events has been added.</li>
+     <li><p>改变了关于 <code>ping</code> 属性的实现以及行为细节.
+     <li><p>可以更舒适的通过 <code>&lt;meta http-equiv=content-type&gt;</code> 来设置字符编码</li>
+     <li><p>整理了 <code>canvas</code> 元素的API. 添加了对文本的支持
+     <li><p><code>globalStorage</code> 现在会受限于同源策略并重命名为 <code>localStorage</code>. 发布了相关的事件派发机制.
+     <li><p>修改了 <code>postMessage()</code> API. 只会暴露消息的源信息，而不是暴露消息的源URL. 同时它还需要一个第二参数来制定目标文档的源.
+     <li><p>发布了拖拽API. 向<code>dataTransfer</code> 对象中添加了<code>types</code> 属性来表明所传输的数据的类型.
+     <li><p>将 <code>m</code> 元素重命名为 <code>mark</code>.
+     <li><p>修改并发布了来自服务器的事件. 它试用了一种向前兼容的新的形式.
+     <li><p>Caption对于 <code>figure</code> 元素来说再不是必须的.
+     <li><p> <code>ol</code> 元素有了一个新的 <code>reversed</code> 属性.
+     <li><p>根据反馈修改字符编码的检测方式.
+     <li><p>根据反馈修改了HTML 解析器章节.
+     <li><p>对正在编辑的section做了多种改变, 如 <code>queryCommandEnabled()</code> 及相关方法。
+     <li><p>向 <code>td</code> 中添加了 <code>headers</code> 属性
+     <li><p>向 <code>table</code>  元素添加了 <code>createTBody()</code> 方法.
+     <li><p>在HTML解析器中添加了对MathML的支持. (对SVG的支持仍需等待SVG 工作组的回应)
+     <li><p>添加了开发者自定义属性功能.开发者可以向元素上添加形如 <code>data-<var>name</var></code> 的属性，这些属性可以通过访问元素的 <code>dataset[<var>name</var>]</code> 来获取.
+     <li><p> <code>q</code>元素需要使用分界引号来呈现，而不是浏览器来呈现它.
+     <li><p> <code>target</code> 属性可以取值<code>_blank</code>.
+     <li><p>定义了 <code>showModalDialog</code> API.
+     <li><p>定义了 <code>document.domain</code> API.
+     <li><p> <code>source</code> 元素有了一个新的属性 <code>pixelratio</code> ，它在视频有某种编码错误的时候会有用。
+     <li><p>为 <code>video</code> 元素添加了<code>bufferedBytes</code>, <code>totalBytes</code> 和 <code>bufferingThrottled</code> 等IDL属性
+     <li><p>出于与过程事件规范的一致性考虑，多媒体元素的 <code>begin</code> 事件已被重命名为 <code>loadstart</code>.
+     <li><p>为 <code>script</code> 元素添加了 <code>charset</code> 属性.
+     <li><p> <code>iframe</code> 元素已经可以支持  <code>sandbox</code> 和 <code>seamless</code> 属性来支持沙箱功能.
+     <li><p>添加了 <code>ruby</code>, <code>rt</code> and <code>rp</code> 元素来支持ruby标记.
+     <li><p>添加了对用户显示提示消息的 <code>showNotification()</code> 方法
+     <li><p>添加了对 <code>beforeprint</code> 和 <code>afterprint</code> 事件的支持</li>
     </ul>
 
     <h2 class="no-num" id="acknowledgments">Acknowledgments</h2>
