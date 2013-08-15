@@ -135,7 +135,7 @@
    <li><a href="#htmlelement-extensions"><span class="secno">5.4 </span><code>HTMLElement</code>的扩展</a></li>
    <li><a href="#other-extensions"><span class="secno">5.5 其他元素的扩展</span></a></li>
    <li><a href="#obsolete-apis"><span class="secno">5.6 废弃的API</span></a></ol></li>
- <li><a class="appendix" href="#changelog"><span class="secno">6 </span>HTML Changelogs</a>
+ <li><a class="appendix" href="#changelog"><span class="secno">6 </span>HTML变更日志</a>
   <ol class="toc">
    <li><a href="#changes-2012-09-14"><span class="secno">6.1 </span>Changes from 14 September 2012 to 6 May 2013</a></li>
    <li><a href="#changes-2012-03-29"><span class="secno">6.2 </span>Changes from 29 March 2012 to 14 September 2012</a></li>
@@ -1996,86 +1996,85 @@
      <li><p><code>table</code> 元素现在默认为 'box-sizing:border-box' 。
      <li><p>修复 潜在CORS启用获取（potentially CORS-enabled fetch）原理中的bug。
      <li><p>文档纲要的算法会忽略有 <code>hidden</code> 属性的元素。
-     <li><p>Markup generators that are unable to provide required <code>alt</code> text can now use a specific attribute on <code>img</code> that makes validators ignore the missing <code>alt</code> error.
-     <li><p>Workers and shared workers now support <code>data:</code> URLs.
-     <li><p>The <code>inputmode</code> attribute has been added to <code>input</code> and <code>textarea</code>.
-     <li><p>The <code>autocomplete</code> attribute has been extended to support prefilling specific things.
-     <li><p>WebSocket supports sending <code>ArrayBufferView</code> as well as <code>ArrayBuffer</code>.
-     <li><p>The <code>border</code> attribute on <code>table</code> is non-conforming again.
-     <li><p>The canvas ImageData methods now assume 96dpi, and a set of "HD" methods have been introduced.
-     <li><p>The shared worker <code>connect</code> event now also exposes the source port in the <code>source</code> IDL attribute.
-     <li><p>Lone surrogates are converted to U+FFFD instead of throwing in WebSocket <code>send()</code>.
-     <li><p>The <code>setRangeText()</code> method has been added to <code>input</code> and <code>textarea</code>.
-     <li><p>The <code>srcset</code> attribute has been added to <code>img</code>.
-     <li><p>Application cache now has an <code>prefer-online</code> mode.
-     <li><p>Dialogs are now supported with the <code>dialog</code> element, the <code>inert</code> global attribute and the <code>dialog</code> method on <code>form</code>.
-     <li><p>The <code>resetTransform()</code> method, <code>currentTransform</code> IDL attribute, several IDL attributes for font metrics, <code>resetClip()</code> method, <code>imageSmoothingEnabled</code> IDL attribute, <code>addHitRegion()</code> method, <code>removeHitRegion()</code> method, support for dashed lines, have been added to the canvas 2d context.
+     <li><p>不能提供必需的 <code>alt</code> 文本的标记生成器，现在可以用 <code>img</code> 上的指定属性来使验证器忽略 <code>alt</code> 值不存在的错误。
+     <li><p>Workers 和 共享workers 现在支持 <code>data:</code> URL。
+     <li><p>在 <code>input</code> 和 <code>textarea</code>上新增了<code>inputmode</code> 属性。
+     <li><p><code>autocomplete</code> 属性可扩展支持预填入指定的值。
+     <li><p>WebSocket 支持像发送 <code>ArrayBuffer</code> 一样发送 <code>ArrayBufferView</code> 。
+     <li><p><code>table</code> 上的 <code>border</code> 属性又不符合规范了。
+     <li><p>canvas ImageData 方法现在假定 96dpi分辨率，并且引入了一系列“HD”方法。
+     <li><p>共享worker的 <code>connect</code> 事件现在在 <code>source</code> IDL属性中同时暴露源端口。
+     <li><p>在WebSocket <code>send()</code> 中，单独代理(lone surrogates) 被转换成 U+FFFD。
+     <li><p><code>input</code> 和 <code>textarea</code> 新增了<code>setRangeText()</code> 方法。
+     <li><p><code>img</code> 增加了 <code>srcset</code> 属性。
+     <li><p>应用缓存现在有了 <code>prefer-online</code>（上网优先） 模式.
+     <li><p>对话框现在被 <code>dialog</code> 元素、 <code>inert</code> 全局属性和 <code>form</code>里的 <code>dialog</code> 方法支持。
+     <li><p>为canvas 2d context增加了 <code>resetTransform()</code> 方法、 <code>currentTransform</code> IDL 属性、 几个字体度量的 IDL 属性、 <code>resetClip()</code> 方法、 <code>imageSmoothingEnabled</code> IDL 属性、 <code>addHitRegion()</code> 方法、 <code>removeHitRegion()</code> 方法、虚线的支持。
     </ul>
 
     <h3 id="changes-2011-05-25"><span class="secno">6.3 </span>从2011-5-25到2012-3-29发生的变更</h3> <!-- rev 6140 - 7027 -->
 
     <ul>
-     <li><p>Support for mutation observers was added.
-     <li><p>The <code>TextTrackCue</code> members <code>alignment</code>, <code>linePosition</code>, <code>textPosition</code> and <code>direction</code> were renamed to <code>align</code>, <code>line</code>, <code>position</code> and <code>vertical</code>, respectively.
-     <li><p>The <code>command</code> element now has a <code>command</code> attribute.
-     <li><p>Drag and drop content is now suggested to be filtered by user agents to prevent XSS attacks.
-     <li><p>The <code>translate</code> global attribute was added.
-     <li><p>The <code>showModalDialog()</code>, <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods are now allowed to do nothing during <code>pagehide</code>, <code>beforeunload</code> and <code>unload</code> events.
-     <li><p>The <code>script</code> element now supports <code>beforescriptexecute</code> and <code>afterscriptexecute</code> events.
-     <li><p><code>window.onerror</code> now supports a fourth argument for column position.
-     <li><p>The <code>window.opener</code> IDL attribute can now return null in some cases.
-     <li><p>The <code>clearTimeout()</code> and <code>clearInterval()</code> methods were made synonymous.
-     <li><p>The CSS <code>@global</code> at-rule was introduced, for use together with <code>style</code> elements with the <code>scoped</code> attribute.
-     <li><p>The <code>embed</code> and <code>object</code> elements now have a legacy caller.
-     <li><p>The handling of <code>window.onerror</code>'s return value was changed to match reality.
-     <li><p>The <code>setTimeout()</code> API is now allowed to be throttled in background tabs.
-     <li><p>The <code>:valid</code> and <code>:invalid</code> pseudo-classes now apply to <code>form</code> elements.
-     <li><p>The <code>toBlob()</code> method on <code>canvas</code> now honors the origin-clean flag.
-     <li><p>The <code>activeElement</code> IDL attribute now points to the relevant browsing context container (e.g. <code>iframe</code>) when a child document has focus.
-     <li><p>The <code>atob()</code> method now ignores whitespace.
-     <li><p>The <code>dropzone</code> attribute was changed to use "<code>string:</code>" and "<code>file:</code>" instead of "<code>s:</code>" and "<code>f:</code>".
-     <li><p>The HTML parser was fixed to correctly handle a case involving foreign lands and foster parenting.
-     <li><p>The date-and-time microsyntaxes now allows a single space instead of a "T".
-     <li><p>Application cache no longer checks the MIME type of the cache manifest.
-     <li><p>The <code>cueAsSource</code> IDL attribute on <code>TextTrackCue</code> got renamed to <code>text</code>.
-     <li><p>The <code>window.onerror</code> API is now invoked with dummy arguments for cross-origin scripts.
-     <li><p>The <code>textarea</code> element's <code>value</code> and <code>textLength</code> IDL attributes have their newlines normalized to LF.
-     <li><p>The <code>q</code> element now has language-specific quotes rendered by default.
-     <li><p>The <code>data</code> element was introduced.
-     <li><p>The <code>time</code> element was redesigned to make it match how people wanted to use it. Its <code>pubdate</code> attribute was dropped.
-     <li><p>The legacy caller on <code>form</code> was removed.
-     <li><p>The <code>location.resolveURL()</code> method was removed.
-     <li><p>The <code>track</code> element now sniffs instead of obeying the MIME type.
-     <li><p>The <code>load()</code> method on documents created by <code>createDocument()</code> is now defined on the <code>XMLDocument</code> interface.
-     <li><p>Members of <code>HTMLDocument</code> moved to <code>Document</code> and <code>window.HTMLDocument</code> now just returns <code>window.Document</code>.
-     <li><p>The <code>MutableTextTrack</code> and <code>TextTrack</code> interfaces were merged and <code>TextTrackCue</code> was made more mutable.
-     <li><p>The <code>selectedOption</code> IDL attribute on <code>input</code> was dropped.
-     <li><p>Attribute values in Selectors are now case sensitive for all attributes.
-     <li><p>The <code>readyState</code> IDL attribute moved from <code>TextTrack</code> to <code>HTMLTrackElement</code>.
-     <li><p>The <code>text/html-sandboxed</code> MIME type was dropped.
-     <li><p>Floating point numbers are now allowed to begin with a "<code>.</code>" character.
-     <li><p>Navigating to an audio or video resource is now supported.
-     <li><p>Table cells now allow flow content but does not allow <code>header</code>, <code>footer</code>, sectioning content or heading content descendants.
-     <li><p>Adding a track to a media element now fires an <code>addtrack</code> event on the relevant track list objects.
-     <li><p>Setting <code>currentTime</code> on media elements before the media has loaded now defers the seek instead of throwing.
-     <li><p>Plugins are no longer disabled in sandboxed <code>iframe</code>s if they honor the <code>sandbox</code> attribute.
-     <li><p>Some tweaks to history navigation and related events.
-     <li><p>Media elements and <code>MediaController</code>s now get paused when they end.
-     <li><p>Events now support constructors and some <code>init*Event()</code> methods were removed.
-     <li><p>Media elements now fire a <code>suspend</code> event when the resource is loaded.
-     <li><p>Form submission now normalizes newlines to CRLF.
-     <li><p>Some tweaks around bidi and the <code>br</code> element.
-     <li><p>Large parts of the Editing section moved to HTML Editing APIs.
-     <li><p><code>UndoManager</code> and related features moved to UndoManager and DOM Transaction.
-     <li><p><code>isProtocolHandlerRegistered()</code>, <code>isContentHandlerRegistered()</code>, <code>unregisterProtocolHandler()</code> and <code>unregisterContentHandler()</code> were added.
-     <li><p><code>registerContentHandler()</code> now has a blacklist of MIME types.
-     <li><p><code>registerProtocolHandler()</code> now has a whitelist of protocols, but also supports any protocol that starts with "<code>web+</code>".
-     <li><p>Fragment identifiers for <code>text/html</code> resources now don't need to point to an element with a matching ID.
-     <li><p><code>audio</code> elements are now allowed to have zero <code>source</code> children.
-     <li><p>There are now some restrictions on the use of bidi formatting characters.
-     <li><p>The <code>maxlength</code> and <code>size</code> attributes are allowed (but give warnings in validators) on <code>input</code> elements with <code>type=number</code>.
-     <li><p>The link relation "<code>shortcut icon</code>" is now allowed.
-     <li><p>Heading elements are now allowed to have the <code>heading</code> and <code>tab</code> roles.
+     <li><p>对观察者突变增加了支持。
+     <li><p><code>TextTrackCue</code> 的成员 <code>alignment</code>, <code>linePosition</code>, <code>textPosition</code> 和 <code>direction</code> 被分别重命名为 <code>align</code>, <code>line</code>, <code>position</code> 和 <code>vertical</code>。
+     <li><p><code>command</code> 元素有了 <code>command</code> 属性。
+     <li><p>建议拖拽内容应该被用户代理（浏览器）过滤以防止XSS攻击。
+     <li><p>新增了 <code>translate</code> 全局属性。
+     <li><p><code>showModalDialog()</code>, <code>alert()</code>, <code>confirm()</code> 和 <code>prompt()</code> 方法在 <code>pagehide</code>, <code>beforeunload</code> 和 <code>unload</code> 事件期间不允许做任何事。
+     <li><p><code>script</code> 元素支持 <code>beforescriptexecute</code> 和 <code>afterscriptexecute</code> 事件。
+     <li><p><code>window.onerror</code> 现在支持第4个参数作为列位置。
+     <li><p><code>window.opener</code> IDL 属性在某些情况下可返回 null 。
+     <li><p> <code>clearTimeout()</code> 和 <code>clearInterval()</code> 方法是同义的。
+     <li><p>为了和带有 <code>scoped</code> 属性的 <code>style</code> 元素一期使用，在CSS中引入了 <code>@global</code> at规则
+     <li><p><code>embed</code> 和 <code>object</code> 元素现在有遗留调用（legacy caller）。
+     <li><p>对 <code>window.onerror</code> 返回值的处理变得合理。
+     <li><p><code>setTimeout()</code> API现在允许在后台标签中终止。
+     <li><p><code>:valid</code> 和 <code>:invalid</code> 伪类应用于 <code>form</code> 元素.
+     <li><p>将源清除标识（origin-clean flag）授予 <code>canvas</code> 的 <code>toBlob()</code> 方法。
+     <li><p>当有子文档获得焦点的时候， <code>activeElement</code> IDL 属性指向相关的正在浏览的上下文容器（如： <code>iframe</code> ）。
+     <li><p><code>atob()</code> 方法会忽略空格。
+     <li><p>修改了 <code>dropzone</code> 属性，用 "<code>string:</code>" 和 "<code>file:</code>" 代替 "<code>s:</code>" and "<code>f:</code>"。
+     <li><p>修正了HTML解析器使其可以正确处理涉及外国土地 （foreign lands） 和寄养父母（foster parenting）的情况。
+     <li><p>日期与时间的微语法现在允许以1个空格代替"T".
+     <li><p>应用缓存不再检查缓存清单(cache manifest)中的MIME类型。
+     <li><p><code>TextTrackCue</code> 上的 <code>cueAsSource</code> IDL 属性更名为 <code>text</code>。
+     <li><p><code>window.onerror</code> API 现在可以被跨域脚本以伪参数调用。
+     <li><p><code>textarea</code> 元素的 <code>value</code> 和 <code>textLength</code> IDL 属性将它们换行标准化为 LF.
+     <li><p><code>q</code> 元素有了默认 特定语言 引号的渲染。
+     <li><p>引入了 <code>data</code> 元素。
+     <li><p><code>time</code> 元素被重新设计使之匹配人们希望的使用方式。移除了它的 <code>pubdate</code> 属性。
+     <li><p><code>form</code> 上的遗留调用（legacy caller）被移除。
+     <li><p><code>location.resolveURL()</code> 方法被移除。
+     <li><p><code>track</code> 元素现在会去嗅探MIME类型，而不是遵循MINE类型。
+     <li><p>通过 <code>createDocument()</code> 创建的文档的<code>load()</code> 方法现在在 <code>XMLDocument</code> 接口上有定义。
+     <li><p><code>HTMLDocument</code> 的成员移至 <code>Document</code> ； <code>window.HTMLDocument</code> 对象现在只返回 <code>window.Document</code>；
+     <li><p>合并了<code>MutableTextTrack</code> 和 <code>TextTrack</code> 接口；使 <code>TextTrackCue</code> 变得更多变
+     <li><p>移除了 <code>input</code> 上的 <code>selectedOption</code> IDL 属性。
+     <li><p>选择器上的所有属性的属性值现在区分大小写了。
+     <li><p>将 <code>TextTrack</code> 上的 <code>readyState</code> IDL 属性移至 <code>HTMLTrackElement</code>。
+     <li><p>移除了 <code>text/html-sandboxed</code> MIME 类型。
+     <li><p>浮点数现在可以以字符 "<code>.</code>" 开头。
+     <li><p>表格的单元格现在允许流内容（flow content），但不允许 <code>header</code>, <code>footer</code>, 分区块内容或标题内容的后代。
+     <li><p>对媒体元素增加曲目的时候，会在相应曲目列表对象上触发 <code>addtrack</code> 事件。 
+     <li><p>如果在媒体被加载之前，设置媒体元素的 <code>currentTime</code> 将延迟查找，而不是抛出错误。
+     <li><p>在沙盒 <code>iframe</code> 里的插件如果它们有 <code>sandbox</code> 属性，将不再禁用。
+     <li><p>对历史导航和相关事件进行了微调。
+     <li><p>媒体元素和 <code>MediaController</code> 播放结束时会暂停。
+     <li><p>事件现在支持构造器，并且一些 <code>init*Event()</code> 方法被移除了。
+     <li><p>媒体元素现在在资源加载之后会触发一个 <code>suspend</code> 事件。
+     <li><p>表单提交现在将换行标准化为CRLF.
+     <li><p>关于双向算法（bidi）和 <code>br</code> 元素的微调。
+     <li><p>大部分的编辑内容移至HTML编辑API。
+     <li><p><code>UndoManager</code> 和相关特性移至 UndoManager 和DOM事务.
+     <li><p>新增了<code>isProtocolHandlerRegistered()</code>, <code>isContentHandlerRegistered()</code>, <code>unregisterProtocolHandler()</code> 和 <code>unregisterContentHandler()</code>。
+     <li><p><code>registerContentHandler()</code> 现在有了MIME类型黑名单。
+     <li><p><code>registerProtocolHandler()</code> 现在有了端口黑名单，但仍然支持任何以 "<code>web+</code>" 开头的端口。
+     <li><p><code>text/html</code> 资源的片段标识符现在不需要指向一个有ID的元素。
+     <li><p><code>audio</code> 元素允许有0个 <code>source</code> 子元素.
+     <li><p>使用bidi格式化字符现在有一些限制。
+     <li><p>有 <code>type=number</code> 的 <code>input</code> 元素允许有 <code>maxlength</code> 和 <code>size</code> 属性 (但是会在验证器中给出警告信息)
+     <li><p>链接关系现在允许有 "<code>shortcut icon</code>"。
+     <li><p>标题元素现在允许有 <code>heading</code> 和 <code>tab</code> 的角色。
      <li><p>Things that use <code>EventTarget</code> now inherit from it instead of using "implements".
      <li><p>The <code>setInterval()</code> API now clamps to 4ms instead of 10ms.
      <li><p>The <code>select</code> element and its <code>options</code> collection now have a setter.
@@ -2105,11 +2104,11 @@
      <li><p>The <code>external</code> IDL attribute has been added on <code>window</code> and has the members <code>AddSearchProvider()</code> and <code>IsSearchProviderInstalled()</code>.
     </ul>
 
-    <p>Further changes to WHATWG HTML that do not affect W3C HTML5:</p>
+    <p>更多WHATWG HTML的变更，对 W3C HTML5 没有影响:</p>
 
     <ul>
-     <li><p>The 2d context now supports ellipses with the <code>arc()</code> and <code>arcTo()</code> methods and the new <code>ellipse()</code> method.
-     <li><p>The 2d context now supports <code>Path</code> objects. SVG path data can be added to a <code>Path</code>.
+     <li><p>The 2d context 现在支持椭圆，有 <code>arc()</code> 和 <code>arcTo()</code> 和新的 <code>ellipse()</code> 方法。
+     <li><p>The 2d context 现在支持 <code>Path</code> 对象。SVG路径数据可以添加到 <code>Path</code> 中。
      <li><p>The <code>http+aes:</code> and <code>https+aes:</code> URL schemes were added to allow sensitive resources to be held on untrusted servers.
      <li><p>When the <code>itemprop</code> attribute is used on an element where microdata gets its value from an attribute (like <code>href</code> on <code>a</code> elements), that attribute is now required.
      <li><p><code>PeerConnection</code> was moved to WebRTC.
@@ -2121,7 +2120,7 @@
      <li><p>The microdata to RDF conversion algorithm was dropped.
      <li><p>The <code>link</code> element is no longer allowed to have both <code>rel</code> and <code>itemprop</code>.
      <li><p>WebSocket API disallows opening an insecure connection if the document uses a secure connection.
-     <li><p>The "storage mutex" is made optional.
+     <li><p>“存储互斥（storage mutex）”是可选的。
      <li><p>Web Storage no longer supports structured data.
      <li><p>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in W3C HTML5.
      <li><p>An experimental specification for the <code>window.find()</code> method was added.
@@ -2141,11 +2140,11 @@
      <li><p>Redirects in WebSockets are now blocked for security reasons.
     </ul>
 
-    <h3 id="changes-2011-04-05"><span class="secno">6.4 </span>Changes from 5 April 2011 to 25 May 2011</h3> <!-- rev 5974 - 6139 -->
+    <h3 id="changes-2011-04-05"><span class="secno">6.4 </span>2011-4-5到2011-5-25发生的变更</h3> <!-- rev 5974 - 6139 -->
 
     <ul>
-     <li><p>Support for the <code>javascript:</code> scheme in <code>img</code>, <code>object</code>, CSS, etc, has been dropped.
-     <li><p>The <code>toBlob()</code> method has been added to <code>canvas</code>.
+     <li><p>移除了 <code>img</code>, <code>object</code>, CSS, 等等元素中的 <code>javascript:</code> 机制。
+     <li><p>给 <code>canvas</code> 新增了 <code>toBlob()</code> 方法。
      <li><p>The <code>drawFocusRing()</code> method on the <code>canvas</code> 2d context has been split into two methods, <code>drawSystemFocusRing()</code> and <code>drawCustomFocusRing()</code>.
      <li><p>The <code>values</code> attribute on <code>PropertyNodeList</code> has been replaced with a <code>getValues()</code> method.
      <li><p>The <code>select</code> event has been specified.
@@ -2159,10 +2158,10 @@
      <li><p>The <code>u</code> element is now conforming.
      <li><p>The <code>summary</code> attribute on <code>table</code> is now non-conforming.
      <li><p>The <code>audio</code> attribute on <code>video</code> was changed to a boolean <code>muted</code> attribute.
-     <li><p>The <code>Content-Language</code> meta pragma is now non-conforming.
+     <li><p><code>Content-Language</code> 元标注现在不符合规范。
     </ul>
 
-    <h3 id="changes-2011-01-13"><span class="secno">6.5 </span>Changes from 13 January 2011 to 5 April 2011</h3> <!-- rev 5779 - 5974 -->
+    <h3 id="changes-2011-01-13"><span class="secno">6.5 </span>从2011-1-13到2011-4-5的变更</h3> <!-- rev 5779 - 5974 -->
 
     <ul>
      <li><p>The <code>pushState</code> and <code>replaceState</code> features have
@@ -2197,15 +2196,14 @@
      no longer allowed to have the empty string as value.
     </ul>
 
-    <h3 id="changes-2010-10-19"><span class="secno">6.6 </span>Changes from 19 October 2010 to 13 January 2011</h3> <!-- rev 5643 - 5779 -->
+    <h3 id="changes-2010-10-19"><span class="secno">6.6 </span>从2010-10-19到2011-1-13的变更</h3> <!-- rev 5643 - 5779 -->
 
     <ul>
-     <li><p>Drag and drop model was refined.</li>
-     <li><p>A new global <code>dropzone</code> attribute was added.</li>
+     <li><p>精细化拖拽模型</li>
+     <li><p>新增了全局 <code>dropzone</code> 属性</li>
      <li><p>A new <code>bdi</code> element was added to aid with user-generated
      content that may have bidi implications.</li>
-     <li><p>The <code>dir</code> attribute gained a new "<code>auto</code>"
-     value.</li>
+     <li><p> <code>dir</code> 属性新增了 "<code>auto</code>" 值。</li>
      <li><p>A <code>dirname</code> attribute was added to <code>input</code>
      elements. When specified the directionality as specified by the user
      will be submitted to the server as well.</li>
